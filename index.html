@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timer Suite</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="timer-app">
+    <div class="clock-image-wrap">
+      <img class="clock-image" src="clock.svg" alt="Clock illustration" />
+    </div>
+    <h1>Timer Suite</h1>
+
+    <div class="mode-switch" role="tablist" aria-label="Timer modes">
+      <button class="mode-btn is-active" data-mode="stopwatch" type="button">Stopwatch</button>
+      <button class="mode-btn" data-mode="countdown" type="button">Countdown</button>
+    </div>
+
+    <div id="countdownConfig" class="config is-hidden">
+      <label for="minutes">Set minutes</label>
+      <input id="minutes" type="number" min="0" step="0.1" value="1" />
+    </div>
+
+    <p id="display" class="display">00:00.00</p>
+
+    <div class="buttons">
+      <button id="startBtn" type="button">Start</button>
+      <button id="pauseBtn" type="button">Pause</button>
+      <button id="resetBtn" type="button">Reset</button>
+      <button id="lapBtn" type="button">Lap</button>
+    </div>
+
+    <section class="laps">
+      <h2>Laps</h2>
+      <ol id="lapList"></ol>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
